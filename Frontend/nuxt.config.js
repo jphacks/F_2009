@@ -1,9 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
 
+const repositry_name = "F_2009"
+
 export default {
-  router: {
-    base: '/F_2009/'
-  },
 
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -49,6 +48,10 @@ export default {
     '@nuxtjs/onesignal',
   ],
 
+  router: {
+    base: `/${repositry_name}/`
+  },
+
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
@@ -60,7 +63,12 @@ export default {
         disable: true
       },
     },
-    importScripts: ['sw.js'], // 必須
+    path: `/${repositry_name}`,
+    importScripts: [`/${repositry_name}/sw.js`], // 必須
+  },
+
+  workbox: {
+    swURL: `/${repositry_name}/sw.js`,
   },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
@@ -99,6 +107,6 @@ export default {
     theme_color: '#ffffff',
     background_color: '#ffffff',
     display: "standalone",
-    start_url: "/"
+    start_url: `/${repositry_name}/`
   }
 }
