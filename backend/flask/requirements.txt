@@ -1,0 +1,6 @@
+Flask
+requests
+sqlalchemy
+pymysql
+flask-cors
+flask-restful
