@@ -41,16 +41,28 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+
+    '@nuxtjs/onesignal',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
+  oneSignal: {
+    init: {
+      appId: 'b595fe79-9901-4849-80b4-8ac6eabe379e',
+      allowLocalhostAsSecureOrigin: true, // localhostで動作確認する場合true
+      welcomeNotification: {
+        disable: true
+      },
+    },
+    importScripts: ['sw.js'], // 必須
+  },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -67,5 +79,22 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+
+  generate: {
+    dir: "../docs"
+  },
+
+  manifest: {
+    name: "安心ふろ～",
+    title: "安心ふろ～",
+    'og:title': '安心ふろ～',
+    description: '高齢者の風呂場での異常を検知してくれるアプリ 「安心ふろ～」',
+    'og:description': '高齢者の風呂場での異常を検知してくれるアプリ 「安心ふろ～」',
+    lang: 'ja',
+    theme_color: '#ffffff',
+    background_color: '#ffffff',
+    display: "standalone",
+    start_url: "/"
   }
 }

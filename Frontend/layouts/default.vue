@@ -1,90 +1,49 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+  <!--
+    デザイン案ができた後はこっち
     <v-app-bar
       :clipped-left="clipped"
+      :elevation="0"
+      class="header"
+      color="transparent"
       fixed
       app
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
+    -->
+    <v-app-bar
+      :clipped-left="clipped"
+      color="amber darken-1"
+      fixed
+      dark
+      app
+    >
+      <div class="text-h5 font-weight-bold">安心ふろ～</div>
     </v-app-bar>
     <v-main>
       <v-container>
         <nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
+
+    <!--
+    <v-bottom-navigation
+      v-model="value"
+      class="footer"
+      fixed  >
+    -->
+    <v-bottom-navigation
+      class="amber darken-1"
       fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+      app  >
+      <v-btn v-for="item in items" :key="item.title" :to="item.to">
+        <span>{{ item.title }}</span>
+
+        <v-icon>{{ item.icon }}</v-icon>
+      </v-btn>
+    </v-bottom-navigation>
+
+
   </v-app>
 </template>
 
@@ -97,8 +56,8 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
+          icon: 'mdi-home',
+          title: 'Home',
           to: '/'
         },
         {
@@ -106,12 +65,24 @@ export default {
           title: 'Inspire',
           to: '/inspire'
         }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+      ]
     }
-  }
+  },
 }
 </script>
+
+<style scoped>
+.header {
+      background: no-repeat;
+      background-image: url("~assets/v.png");
+      filter: drop-shadow(0px 3px 3px #aaa);
+}
+
+.footer {
+      background: no-repeat;
+      background-image: url("~assets/v.png");
+      /* background-size: cover; */
+      box-shadow: 0px 0px 0px 0px;
+      filter: drop-shadow(0px -3px 3px #aaa);
+}
+</style>
