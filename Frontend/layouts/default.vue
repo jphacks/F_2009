@@ -36,9 +36,8 @@
       class="amber darken-1"
       fixed
       app  >
-      <v-btn v-for="item in items" :key="item.title" :to="item.to">
+      <v-btn v-for="item in items" :key="item.title" :to="item.to" style="height: 100%">
         <span>{{ item.title }}</span>
-
         <v-icon>{{ item.icon }}</v-icon>
       </v-btn>
     </v-bottom-navigation>

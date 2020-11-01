@@ -53,7 +53,9 @@ export default {
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL || 'https://virtserver.swaggerhub.com/ToruTamahashi/AnshinFlow/1.0.1/api'
+  },
 
   oneSignal: {
     init: {
@@ -69,6 +71,7 @@ export default {
 
   workbox: {
     swURL: `/${repositry_name}/sw.js`,
+    // swScope: `/${repositry_name}`
   },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
