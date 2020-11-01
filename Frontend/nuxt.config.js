@@ -1,6 +1,10 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  router: {
+    base: '/F_2009/'
+  },
+
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
 
