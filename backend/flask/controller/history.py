@@ -6,7 +6,7 @@ from flask import jsonify
 app = Blueprint('history', __name__)
 
 @app.route('history/week', methods=['GET'])
-def get():
+def week():
     body = {
       "history": [
         {
