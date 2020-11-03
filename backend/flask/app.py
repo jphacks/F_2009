@@ -12,5 +12,9 @@ CORS(app, origin=['localhost','jphacks.github.io'], allow_headers=['Content-Type
 app.register_blueprint(status.app, url_prefix = '/api')
 app.register_blueprint(history.app, url_prefix = '/api')
 
+@app.route('/')
+def hello():
+    return 'Hello world'
+
 if __name__ == '__main__':
     app.run(debug=True)
