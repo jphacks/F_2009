@@ -1,14 +1,28 @@
+import sys
+
 import sqlalchemy
 from datetime import datetime, timedelta, timezone
 import sqlalchemy.ext.declarative
 import sqlalchemy.orm
 from sqlalchemy.orm import relationship
 
-USERNAME = 'root'
-PASSWORD = 'root'
-HOST = 'localhost'
-PORT = '3333'
-DATABASE = 'anshinfurow'
+# 参照するディレクトリをひとつ上の階層へ
+sys.path.append('../')
+
+import config
+# from config import DB_USERNAME
+# from config import DB_PASS
+# from config import DB_HOST
+# from config import DB_PORT
+# from config import DB_NAME
+
+
+USERNAME = config.DB_USERNAME
+PASSWORD = config.DB_PASS
+HOST = config.DB_HOST
+PORT = config.DB_PORT
+DATABASE = config.DB_NAME
+
 
 url = 'mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8mb4'.format(USERNAME, PASSWORD, HOST, PORT, DATABASE)
 engine = sqlalchemy.create_engine(url, echo=True)

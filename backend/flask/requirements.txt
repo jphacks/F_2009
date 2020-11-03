@@ -5,3 +5,4 @@ pymysql
 flask-cors
 flask-restful
 gunicorn
+python-dotenv
