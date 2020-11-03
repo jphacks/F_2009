@@ -1,17 +1,20 @@
+import sys
 from flask import Flask
 from flask import Blueprint, request
 from flask import jsonify
 
-# from ..models.model import UserEntity
-# from ..models.model import UserService
+# 参照するディレクトリをひとつ上の階層へ
+sys.path.append('../')
+from models.model import UserEntity
+from models.model import UserService
 
 
 app = Blueprint('status', __name__)
 
 @app.route('/status', methods=['GET'])
 def status():
-    # us = UserService()
-    # a = us.find_all()
+    us = UserService()
+    a = us.find_all()
 
     body = {
         "status": 1,

@@ -4,3 +4,4 @@ sqlalchemy
 pymysql
 flask-cors
 flask-restful
+gunicorn
