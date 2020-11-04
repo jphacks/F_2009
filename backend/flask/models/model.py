@@ -8,8 +8,8 @@ from sqlalchemy.orm import relationship
 
 # 参照するディレクトリをひとつ上の階層へ
 sys.path.append('../')
-
 import config
+
 # from config import DB_USERNAME
 # from config import DB_PASS
 # from config import DB_HOST
