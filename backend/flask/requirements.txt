@@ -1,8 +1,10 @@
+apscheduler
+gunicorn
 Flask
-requests
-sqlalchemy
-pymysql
 flask-cors
 flask-restful
-gunicorn
+onesignal-sdk
+pymysql
 python-dotenv
+requests
+sqlalchemy

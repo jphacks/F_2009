@@ -3,6 +3,7 @@ from flask import Blueprint
 from controller import status, history, users
 from flask_cors import CORS
 
+
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 app.config['JSON_SORT_KEYS'] = False
@@ -17,6 +18,8 @@ app.register_blueprint(users.app, url_prefix = '/api')
 @app.route('/')
 def hello():
     return 'Hello world'
+
+
 
 def main():
     app.debug = True

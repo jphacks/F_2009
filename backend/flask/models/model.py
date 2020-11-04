@@ -10,13 +10,6 @@ from sqlalchemy.orm import relationship
 sys.path.append('../')
 import config
 
-# from config import DB_USERNAME
-# from config import DB_PASS
-# from config import DB_HOST
-# from config import DB_PORT
-# from config import DB_NAME
-
-
 USERNAME = config.DB_USERNAME
 PASSWORD = config.DB_PASS
 HOST = config.DB_HOST
