@@ -39,13 +39,16 @@ def status():
         if latest_dict["checkout"] == "0":
             # 入浴中
             status = 1
-            utc_time_entry = latest_tdatetime + datetime.timedelta(hours=-9)
-            jst_entry_time = utc_time_entry.strftime('%Y-%m-%d %H:%M:%S +9000')
-            body["entry_time":jst_entry_time]
+            jst_entry_time = chenge_timeformat(latest_tdatetime)
+            body["entry_time"] = jst_entry_time
             body["message"] = "入浴中です"
         else:
             # 入浴後
             status = 2
+            jst_entry_time = chenge_timeformat(latest_tdatetime)
+            jst_exit_time = chenge_timeformat(latest_tdatetime + datetime.timedelta(minutes=int(latest_dict["bath_time"])))
+            body["entry_time"] = jst_entry_time
+            body["exit_time"] = jst_exit_time
             body["message"] = "今日の入浴は終わりました"
     else:
         # 入浴前
@@ -60,4 +63,10 @@ def status():
     body["alert"] = bool(user.alert)
 
     return jsonify(body)
+
+def chenge_timeformat(tdatetime):
+    # 時間データをJST形式に変換
+    utc_time = tdatetime + datetime.timedelta(hours=-9)
+    jst_time = utc_time.strftime('%Y-%m-%d %H:%M:%S +9000')
+    return jst_time
 
