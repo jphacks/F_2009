@@ -1,46 +1,28 @@
 <template>
-    <dev class="main">
-        <p>接続設定</p>
-        <dev>現在接続中：</dev>
-        <br><br>
-        <dev>WiFi：</dev>
-        <br><br>
-        <dev>デバイス：</dev>
-        <br><br><br>
-
-        <p>STEP1</p>
-        <dev>デバイスを接続します</dev>
-        <br>
-        <v-btn color="yellow" elevation="2" @click="clickNow();">
-          <p class="decode-result">デバイスに接続</p>
-          <qrcode-stream paused="paused"/>
-        </v-btn>
-        <p class="error">{{ error }}</p>
-        <b>{{ result }}</b>
-    </dev>
+  <div id="app">
+    <p class="error">{{ error }}</p>
+    <p class="decode-result" style="font-size:150%;">
+      QRコードリーダー<br>
+      <b style="color:#f00;">{{ result }}</b>
+    </p>
+    <QRsrream @decode="onDecode" @init="onInit" />
+</div>
 </template>
 
 <script>
 import QrcodeStream from 'vue-qrcode-reader'
 
 export default {
-  components: {
-    QrcodeStream,
-  },
-  data () {
-    return {
+  components: { QrcodeStream },
+  data: {
       result: '',
       error: ''
-    }
   },
   methods: {
-    clickNow() {
-      this.onDecode();
-      this.onInit();
-    },
     onDecode (result) {
       this.result = result
     },
+
     async onInit (promise) {
       try {
         await promise
@@ -61,22 +43,10 @@ export default {
       }
     }
   }
-};
+}
 </script>
 
 <style scoped>
-* {
-    font-size: 15pt;
-    margin: 5pt;
-}
-.main > p {
-    font-size: 18pt;
-    font-weight: 1000;
-}
-a {
-  text-decoration: none;
-  color: white;
-}
 .error {
   font-weight: bold;
   color: red;
