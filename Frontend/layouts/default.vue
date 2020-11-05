@@ -64,7 +64,7 @@ export default {
           to: '/notice'
         },
         {
-          icon: 'mdi-bell',
+          icon: 'mdi-help-circle',
           title: '使い方',
           to: '/explain'
         }

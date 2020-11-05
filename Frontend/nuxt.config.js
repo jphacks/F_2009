@@ -54,7 +54,7 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'http://anshinfurow.hackwebapps.net/api'
+    baseURL: 'https://anshinfurow.hackwebapps.net/api'
   },
 
   workbox: {
