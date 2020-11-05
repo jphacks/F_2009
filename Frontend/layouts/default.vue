@@ -1,24 +1,16 @@
 <template>
-  <v-app dark>
-  <!--
-    デザイン案ができた後はこっち
+  <v-app style="
+    background: #FFFFFB
+  ">
+
     <v-app-bar
       :clipped-left="clipped"
-      :elevation="0"
-      class="header"
-      color="transparent"
-      fixed
-      app
-    >
-    -->
-    <v-app-bar
-      :clipped-left="clipped"
-      color="amber darken-1"
+      color="#9EA1A2"
       fixed
       dark
       app
     >
-      <div class="text-h5 font-weight-bold">安心ふろ～</div>
+      <span>{{getTitle()}}</span>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -33,8 +25,10 @@
       fixed  >
     -->
     <v-bottom-navigation
-      class="amber darken-1"
+      color="#FFB304"
+      background-color="#9EA1A2"
       fixed
+      dark
       app  >
       <v-btn v-for="item in items" :key="item.title" :to="item.to" style="height: 100%">
         <span>{{ item.title }}</span>
@@ -56,17 +50,42 @@ export default {
       items: [
         {
           icon: 'mdi-home',
-          title: 'Home',
+          title: 'ホーム',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-wifi',
+          title: '接続',
+          to: '/connect'
+        },
+        {
+          icon: 'mdi-bell',
+          title: '通知',
+          to: '/notice'
+        },
+        {
+          icon: 'mdi-bell',
+          title: '使い方',
+          to: '/explain'
         }
       ]
     }
   },
+  methods: {
+    getTitle(){
+      switch(this.$route.name) {
+        case "index":
+          return "ホーム"
+        case "connect":
+          return "接続"
+        case "notice":
+          return "通知"
+        case "explain":
+          return "使い方"
+      }
+      return this.$route.name
+    }
+  }
 }
 </script>
 

@@ -17,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
     ]
   },
 
@@ -49,12 +49,19 @@ export default {
   ],
 
   router: {
+    linkActiveClass: 'active',
     base: `/${repositry_name}/`
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: process.env.BASE_URL || 'https://virtserver.swaggerhub.com/ToruTamahashi/AnshinFlow/1.0.1/api'
+    baseURL: 'http://anshinfurow.hackwebapps.net/api'
+  },
+
+  workbox: {
+    dev: true,
+    // swURL: `${repositry_name}/sw.js`,
+    swScope: `/${repositry_name}/`
   },
 
   oneSignal: {
@@ -65,13 +72,8 @@ export default {
         disable: true
       },
     },
-    path: `/${repositry_name}`,
+    // path: `/${repositry_name}`,
     importScripts: [`/${repositry_name}/sw.js`], // 必須
-  },
-
-  workbox: {
-    swURL: `/${repositry_name}/sw.js`,
-    // swScope: `/${repositry_name}`
   },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
@@ -107,9 +109,9 @@ export default {
     description: '高齢者の風呂場での異常を検知してくれるアプリ 「安心ふろ～」',
     'og:description': '高齢者の風呂場での異常を検知してくれるアプリ 「安心ふろ～」',
     lang: 'ja',
-    theme_color: '#ffffff',
-    background_color: '#ffffff',
+    theme_color: '#3DB4BE',
+    background_color: '#3DB4BE',
     display: "standalone",
-    start_url: `/${repositry_name}/`
-  }
+    start_url: `/${repositry_name}/`,
+  },
 }

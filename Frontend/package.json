@@ -16,7 +16,8 @@
     "core-js": "^3.6.5",
     "cross-env": "^7.0.2",
     "nuxt": "^2.14.6",
-    "vue-chartjs": "^3.5.1"
+    "vue-chartjs": "^3.5.1",
+    "vue-qrcode-reader": "^2.3.14"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2"
