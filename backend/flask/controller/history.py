@@ -18,18 +18,23 @@ def week():
     bm = BathroomMonitor(user_id)
 
 
+
     # デバイスから入浴履歴取得
-    grandparents_time_list = bm.fast_list()
+    grandparents_time_dict = bm.fast_list()
+    if grandparents_time_dict["status"] == 400:
+        return jsonify({"result":"error","message":"データの取得に失敗しました"})
+
     # 一週間分抽出
-    week_list = get_range(grandparents_time_list,'week')
+    week_list = get_range(grandparents_time_dict,'week')
     # リストを逆順に並べ替え
     week_list_reverse = reverse_list(week_list)
-    result_dict = {"history": [], "mean": None}
+    result_dict = {"result": "success", "history": [], "mean": None, "message": "データの取得に成功しました"}
     for index, item in enumerate(week_list_reverse):
         # 日付抽出
         date = datetime_to_date(item["checkin_time"])
         result_dict["history"].append({"date": date, "minute": int(item["bath_time"])})
     result_dict["mean"] = calc_mean(week_list)
+
     return jsonify(result_dict)
 
 def get_range(time_list,range):

@@ -13,7 +13,7 @@ from modules.bathroom_monitor import BathroomMonitor
 app = Blueprint('status', __name__)
 
 @app.route('/status', methods=['GET'])
-def status():
+def check_status():
     """
     入浴状態を取得
     入浴前：０
@@ -25,9 +25,12 @@ def status():
     bm = BathroomMonitor(user_id)
 
     # デバイスから入浴履歴取得
-    grandparents_time_list = bm.fast_list()
+    grandparents_time_dict = bm.fast_list()
+    if grandparents_time_dict["status"] == 400:
+        return jsonify({"result":"error","message":"データの取得に失敗しました"})
+
     # 最新の履歴を取得
-    latest_dict = grandparents_time_list["grandma_list"][0]
+    latest_dict = grandparents_time_dict["grandma_list"][0]
     latest_tdatetime = datetime.datetime.strptime(latest_dict["checkin_time"], '%Y%m%d%H%M%S')
     now = datetime.datetime.now()
 

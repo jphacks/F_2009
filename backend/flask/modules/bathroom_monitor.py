@@ -4,7 +4,6 @@ import ast
 
 # 参照するディレクトリをひとつ上の階層へ
 sys.path.append('../')
-from models.model import UserEntity
 from models.model import UserService
 
 class BathroomMonitor(object):
@@ -25,6 +24,7 @@ class BathroomMonitor(object):
         else:
             # デバイスidセット
             self.device_id = user.device_id
+            self.hash = user.token
             return user
 
     def dummy(self):
@@ -103,10 +103,23 @@ class BathroomMonitor(object):
 
     def fast_list(self):
         user = self.check_user()
-        device_connection = self.dummy()
-        assign_data = self.assign()
+        if user is None:
+            return {"status": 400, "message": "指定のユーザは存在しませんでした"}
+
+        # device_connection = self.dummy()
+        # if device_connection["status"] == 400:
+        #     return device_connection
+        #
+        # assign_data = self.assign()
+        # if assign_data["status"] == 400:
+        #     return assign_data
+
         result = self.list_all()
-        unassign_data = self.unassign()
+        if result["status"] == 400:
+            return result
+        # unassign_data = self.unassign()
+        # if unassign_data["status"] == 400:
+        #     return unassign_data
         # result = '{"status":200,"grandma_list":[{"checkin_time":"20201102202200","checkout":"0","bath_time":"10"},{"checkin_time":"20201101192500","checkout":"1","bath_time":"20"},{"checkin_time":"20201031192200","checkout":"1","bath_time":"20"},{"checkin_time":"20201030195000","checkout":"1","bath_time":"23"},{"checkin_time":"20201029193000","checkout":"1","bath_time":"10"},{"checkin_time":"20201028192200","checkout":"1","bath_time":"15"},{"checkin_time":"20201027201000","checkout":"1","bath_time":"22"},{"checkin_time":"20201026191200","checkout":"1","bath_time":"13"}],"gramdpa_list":[],"message":"入浴情報一覧の取得に成功しました."}'
         # result_dict = ast.literal_eval(result)
         return result
