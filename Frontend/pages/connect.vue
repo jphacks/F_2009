@@ -97,7 +97,7 @@ export default {
       this.is_connect = false
     },
     connectWifi() {
-      const url = "192.168.4.1"
+      const url = "http://192.168.4.1"
       this.$axios.get(url)
         .then((res)=>{
           window.location.href = url
