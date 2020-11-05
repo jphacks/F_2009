@@ -1,6 +1,6 @@
 <template>
 
-  <v-row class="px-7 py-2">
+  <v-row class="px-5 py-2">
     <v-col cols="12">
       <h1 class="amber--text text--darken-1">{{ getNowDate() }}</h1>
     </v-col>

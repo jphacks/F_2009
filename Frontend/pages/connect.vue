@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row class="px-7 py-2">
+    <v-row class="px-5 py-2">
       <v-col cols="12">
         <div class="text-h5 font-weight-black">接続設定</div>
       </v-col>
@@ -43,7 +43,7 @@ export default {
       result: '',
       error: '',
       overlay: false,
-      height: window.innerHeight - 64 - 56,
+      height: window.innerHeight - 64 - 46,
       is_connect: !!window.localStorage.getItem("user_id")
     }
   },

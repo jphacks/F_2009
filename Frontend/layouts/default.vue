@@ -13,7 +13,7 @@
       <span>{{getTitle()}}</span>
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container class="py-0">
         <nuxt />
       </v-container>
     </v-main>
