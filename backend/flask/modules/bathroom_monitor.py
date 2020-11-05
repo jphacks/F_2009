@@ -7,10 +7,14 @@ sys.path.append('../')
 from models.model import UserService
 
 class BathroomMonitor(object):
-    def __init__(self, user_id):
+    def __init__(self, user_id=None):
         self.user_id = user_id
         self.device_id = None
         self.hash = None
+
+    def set_device_id(self,device_id):
+        self.device_id = device_id
+        return self.device_id
 
     def check_user(self):
         """

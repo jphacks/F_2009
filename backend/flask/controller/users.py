@@ -10,6 +10,7 @@ import random, string
 sys.path.append('../')
 from models.model import UserEntity
 from models.model import UserService
+from modules.bathroom_monitor import BathroomMonitor
 
 
 app = Blueprint('users', __name__)
@@ -18,8 +19,19 @@ app = Blueprint('users', __name__)
 @app.route('/users/create', methods=['POST'])
 def create():
     req_dict = request.get_json(force=True)
-    randomname = ''.join([random.choice(string.ascii_letters + string.digits) for i in range(20)])
     device_id = req_dict["device_id"]
+    us = UserService()
+    user = us.findByDeviceId(device_id)
+    if user is not None:
+        return jsonify({"result": "error", "message": "割当済みのデバイスです"})
+
+    bm = BathroomMonitor()
+    bm.set_device_id(device_id)
+    res = bm.dummy()
+    if res["status"] == 400:
+        return jsonify({"result": "error", "message": "指定のIoTデバイスは存在しません"})
+
+    randomname = ''.join([random.choice(string.ascii_letters + string.digits) for i in range(20)])
     ue = UserEntity()
     ue.user_id = randomname
     ue.device_id = device_id

@@ -65,6 +65,18 @@ class UserService(object):
         else:
             return None
 
+    def findByDeviceId(self, device_id):
+        """
+          #  userテーブルから該当するdevice_idを持つ行を取得
+        :param user_id: String
+        :return: UserEntity
+        """
+        user = session.query(UserEntity).filter(UserEntity.device_id == device_id).all()
+        if len(user) != 0:
+            return user[0]
+        else:
+            return None
+
 
     def create(self, user_entity):
         """
