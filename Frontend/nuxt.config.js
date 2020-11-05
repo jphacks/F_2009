@@ -9,8 +9,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - AnshinFurow',
-    title: 'AnshinFurow',
+    title: '安心ふろ～',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -104,6 +103,7 @@ export default {
 
   manifest: {
     name: "安心ふろ～",
+    short_name: '安心ふろ～',
     title: "安心ふろ～",
     'og:title': '安心ふろ～',
     description: '高齢者の風呂場での異常を検知してくれるアプリ 「安心ふろ～」',
