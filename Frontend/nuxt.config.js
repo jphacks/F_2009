@@ -13,7 +13,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
@@ -103,7 +103,6 @@ export default {
 
   manifest: {
     name: "安心ふろ～",
-    short_name: '安心ふろ～',
     title: "安心ふろ～",
     'og:title': '安心ふろ～',
     description: '高齢者の風呂場での異常を検知してくれるアプリ 「安心ふろ～」',
