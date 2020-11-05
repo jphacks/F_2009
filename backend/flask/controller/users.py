@@ -39,6 +39,7 @@ def create():
     us.create(ue)
 
     body = {
+        'result': 'success',
         'user_id': randomname
     }
 
