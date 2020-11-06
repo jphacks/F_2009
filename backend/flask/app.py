@@ -4,6 +4,7 @@ from controller import status, history, users
 from flask_cors import CORS
 
 from modules.regular_time_check import scheduler
+from modules.push_notification import send_alert
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
@@ -15,11 +16,12 @@ app.register_blueprint(status.app, url_prefix = '/api')
 app.register_blueprint(history.app, url_prefix = '/api')
 app.register_blueprint(users.app, url_prefix = '/api')
 
-# 定期実行開始
-# scheduler.start()
+# 定期リクエスト開始
+scheduler.start()
 
 @app.route('/')
 def hello():
+    #send_alert()
     return 'Hello world'
 
 @app.route('/.well-known/acme-challenge/<filename>')

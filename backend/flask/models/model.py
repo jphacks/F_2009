@@ -27,8 +27,8 @@ class UserEntity(Base):
     name = sqlalchemy.Column(sqlalchemy.String(30))
     password = sqlalchemy.Column(sqlalchemy.String(30))
     device_id = sqlalchemy.Column(sqlalchemy.String(20))
-    alert = sqlalchemy.Column(sqlalchemy.Integer)
     token = sqlalchemy.Column(sqlalchemy.String(30))
+    notice_management = sqlalchemy.Column(sqlalchemy.Integer)
 
     def user_entity_dict(self):
         return {
@@ -36,8 +36,8 @@ class UserEntity(Base):
             'name': self.name,
             'password': self.password,
             'device_id': self.device_id,
-            'alert': self.alert,
-            'token': self.token
+            'token': self.token,
+            'notice_management': self.notice_management
         }
 
 Base.metadata.create_all(engine)
@@ -107,7 +107,7 @@ class UserService(object):
             user.password = upd_user_entity.password
             user.device_id = upd_user_entity.device_id
             user.token = upd_user_entity.token
-            user.alert = upd_user_entity.alert
+            user.notice_management = upd_user_entity.notice_management
             new_user = session.query(UserEntity).filter(
                 UserEntity.user_id == user.user_id).first()
             new_user = new_user

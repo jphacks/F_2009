@@ -2,6 +2,7 @@ import sys
 import requests
 import ast
 
+# from .history_module import get_range,calc_mean
 # 参照するディレクトリをひとつ上の階層へ
 sys.path.append('../')
 from models.model import UserService
@@ -74,6 +75,10 @@ class BathroomMonitor(object):
         return res_dict
 
     def list_all(self):
+        """
+        全入浴時間を取得する
+        :return:
+        """
         payload = \
             {
                 "device_id": self.device_id,
@@ -91,6 +96,10 @@ class BathroomMonitor(object):
         return res_dict
 
     def unassign(self):
+        """
+        割当解除
+        :return:
+        """
         payload = \
             {
                 "device_id": self.device_id,
@@ -127,3 +136,5 @@ class BathroomMonitor(object):
         # result = '{"status":200,"grandma_list":[{"checkin_time":"20201102202200","checkout":"0","bath_time":"10"},{"checkin_time":"20201101192500","checkout":"1","bath_time":"20"},{"checkin_time":"20201031192200","checkout":"1","bath_time":"20"},{"checkin_time":"20201030195000","checkout":"1","bath_time":"23"},{"checkin_time":"20201029193000","checkout":"1","bath_time":"10"},{"checkin_time":"20201028192200","checkout":"1","bath_time":"15"},{"checkin_time":"20201027201000","checkout":"1","bath_time":"22"},{"checkin_time":"20201026191200","checkout":"1","bath_time":"13"}],"gramdpa_list":[],"message":"入浴情報一覧の取得に成功しました."}'
         # result_dict = ast.literal_eval(result)
         return result
+
+

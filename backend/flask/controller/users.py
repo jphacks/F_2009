@@ -31,6 +31,7 @@ def create():
     if res["status"] == 400:
         return jsonify({"result": "error", "message": "指定のIoTデバイスは存在しません"})
 
+    # ランダム文字列生成
     randomname = ''.join([random.choice(string.ascii_letters + string.digits) for i in range(20)])
     ue = UserEntity()
     ue.user_id = randomname
