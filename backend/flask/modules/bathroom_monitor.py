@@ -17,6 +17,11 @@ class BathroomMonitor(object):
         self.device_id = device_id
         return self.device_id
 
+    def set_user_id(self,user_id):
+        self.user_id = user_id
+        return self.user_id
+
+
     def check_user(self):
         """
         dbにユーザが存在するか確認する
@@ -66,12 +71,6 @@ class BathroomMonitor(object):
         # ハッシュセット
         self.hash = res_dict["hash"]
 
-        # dbのhash更新
-        us = UserService()
-        user = us.find(self.user_id)
-        user.token = res_dict["hash"]
-        us.update(user)
-
         return res_dict
 
     def list_all(self):
@@ -114,6 +113,27 @@ class BathroomMonitor(object):
         res_dict = ast.literal_eval(res.text)
         return res_dict
 
+    def update_alert_time(self, alert_time):
+        """
+        アラート閾値更新
+        alert_time int
+        :return:
+        """
+        payload = \
+            {
+                "device_id": self.device_id,
+                "user_id": self.user_id,
+                "alert_time": alert_time,
+                "hash": self.hash
+             }
+
+        res = requests.post(
+            'http://kn46itblog.xsrv.jp/hackathon/jphacks2020/php_apis/device/edit/alert_time', json=payload
+        )
+        print(res.text)
+        res_dict = ast.literal_eval(res.text)
+        return res_dict
+
     def fast_list(self):
         user = self.check_user()
         if user is None:
@@ -136,5 +156,6 @@ class BathroomMonitor(object):
         # result = '{"status":200,"grandma_list":[{"checkin_time":"20201102202200","checkout":"0","bath_time":"10"},{"checkin_time":"20201101192500","checkout":"1","bath_time":"20"},{"checkin_time":"20201031192200","checkout":"1","bath_time":"20"},{"checkin_time":"20201030195000","checkout":"1","bath_time":"23"},{"checkin_time":"20201029193000","checkout":"1","bath_time":"10"},{"checkin_time":"20201028192200","checkout":"1","bath_time":"15"},{"checkin_time":"20201027201000","checkout":"1","bath_time":"22"},{"checkin_time":"20201026191200","checkout":"1","bath_time":"13"}],"gramdpa_list":[],"message":"入浴情報一覧の取得に成功しました."}'
         # result_dict = ast.literal_eval(result)
         return result
+
 
 

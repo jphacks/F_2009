@@ -29,6 +29,7 @@ class UserEntity(Base):
     device_id = sqlalchemy.Column(sqlalchemy.String(20))
     token = sqlalchemy.Column(sqlalchemy.String(30))
     notice_management = sqlalchemy.Column(sqlalchemy.Integer)
+    latest_bath_time = sqlalchemy.Column(sqlalchemy.String(30))
 
     def user_entity_dict(self):
         return {
@@ -37,7 +38,8 @@ class UserEntity(Base):
             'password': self.password,
             'device_id': self.device_id,
             'token': self.token,
-            'notice_management': self.notice_management
+            'notice_management': self.notice_management,
+            'latest_bath_time': self.latest_bath_time
         }
 
 Base.metadata.create_all(engine)
@@ -108,6 +110,7 @@ class UserService(object):
             user.device_id = upd_user_entity.device_id
             user.token = upd_user_entity.token
             user.notice_management = upd_user_entity.notice_management
+            user.latest_bath_time = upd_user_entity.latest_bath_time
             new_user = session.query(UserEntity).filter(
                 UserEntity.user_id == user.user_id).first()
             new_user = new_user

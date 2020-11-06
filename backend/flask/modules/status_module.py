@@ -3,15 +3,17 @@ import datetime
 
 from .bathroom_monitor import BathroomMonitor
 from .history_module import check_history
+
 # 参照するディレクトリをひとつ上の階層へ
 sys.path.append('../')
 from models.model import UserEntity
 from models.model import UserService
 
+
 def check_status(user_id):
     bm = BathroomMonitor(user_id)
 
-    #デバイスから入浴履歴取得
+    # デバイスから入浴履歴取得
     grandparents_time_dict = bm.fast_list()
     if grandparents_time_dict["status"] == 400:
         return {"result": "error", "message": "データの取得に失敗しました"}
@@ -19,7 +21,7 @@ def check_status(user_id):
     # 最新の履歴を取得
     latest_dict = grandparents_time_dict["grandma_list"][0]
     # ダミー
-    # latest_dict = {'checkin_time': '20201106133200', 'checkout': '0', 'bath_time': '40'}
+    # latest_dict = {'checkin_time': '20201106233200', 'checkout': '1', 'bath_time': '10'}
 
     # 入浴開始時間　文字列 -> datetime型に変換
     latest_tdatetime = datetime.datetime.strptime(latest_dict["checkin_time"],
@@ -33,7 +35,8 @@ def check_status(user_id):
         # 最新の履歴と今日の日付が同一　-> 入浴後or入浴中
         if latest_dict["checkout"] == "0":
             # 緊急状態チェック
-            alert_bool = alert_evaluation(user_id, int(latest_dict["bath_time"]))
+            alert_bool = alert_evaluation(user_id,
+                                          int(latest_dict["bath_time"]))
             if alert_bool:
                 # 緊急状態
                 status = 3
@@ -56,6 +59,14 @@ def check_status(user_id):
             body_dict["entry_time"] = jst_entry_time
             body_dict["exit_time"] = jst_exit_time
             body_dict["message"] = "今日の入浴は終わりました"
+
+            # 風呂を出たときにかみさんサーバのアラート閾値更新
+            threshold = calc_threshold(user_id)
+            bm_upd = BathroomMonitor(user_id)
+            bm.check_user()
+            bm.update_alert_time(threshold)
+
+
     else:
         # 入浴前
         status = 0
@@ -68,9 +79,10 @@ def check_status(user_id):
 
 def chenge_timeformat(tdatetime):
     # 時間データをJST形式に変換
-    utc_time = tdatetime + datetime.timedelta(hours=-9)
-    jst_time = utc_time.strftime('%Y/%m/%d %H:%M:%S +9000')
+    utc_time = tdatetime + datetime.timedelta(hours=0)
+    jst_time = utc_time.strftime('%Y/%m/%d %H:%M:%S')
     return jst_time
+
 
 def alert_evaluation(user_id, bath_time):
     """
@@ -79,18 +91,24 @@ def alert_evaluation(user_id, bath_time):
     :param bath_time: 入室してからの経過時間
     :return: 緊急状態：true , 問題なし：false
     """
-    history_dict = check_history(user_id,"all")
+    threshold = calc_threshold(user_id)
 
-    if history_dict["mean"] == 0:
-        # 平均が0 -> 過去データがなければ26で計算
-        mean_bath_time = 26
-    else:
-        mean_bath_time = history_dict["mean"]
-
-    if bath_time > mean_bath_time * 2:
+    if bath_time > threshold:
         # 経過時間が平均入浴時間の倍より長ければ緊急
         return True
     else:
         # 問題なし
         return False
 
+
+def calc_threshold(user_id):
+    history_dict = check_history(user_id, "all")
+    value = None
+    if history_dict["mean"] == 0:
+        # 平均が0 -> 過去データがなければ26で計算
+        value = 26
+    else:
+        value = history_dict["mean"]
+
+    threshold = value * 2
+    return threshold

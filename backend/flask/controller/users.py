@@ -12,7 +12,6 @@ from models.model import UserEntity
 from models.model import UserService
 from modules.bathroom_monitor import BathroomMonitor
 
-
 app = Blueprint('users', __name__)
 
 
@@ -33,9 +32,17 @@ def create():
 
     # ランダム文字列生成
     randomname = ''.join([random.choice(string.ascii_letters + string.digits) for i in range(20)])
+    bm.set_user_id(randomname)
+    res = bm.assign()
+    if res["status"] == 400:
+        return jsonify({"result": "error", "message": "ユーザの作成に失敗しました"})
+
+    # dbにuser_idとdevice_id
     ue = UserEntity()
     ue.user_id = randomname
     ue.device_id = device_id
+    ue.token = res["hash"]
+    ue.notice_management = 0
     us = UserService()
     us.create(ue)
 
