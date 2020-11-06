@@ -115,5 +115,5 @@ def calc_threshold(user_id):
         value = history_dict["mean"]
 
     threshold = value * 2
-    return 1
+    return threshold
     # return threshold

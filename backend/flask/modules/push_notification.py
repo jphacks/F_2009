@@ -11,7 +11,6 @@ REST_API_KEY = config.REST_API_KEY
 
 client = Client(app_id=APP_ID, rest_api_key=REST_API_KEY)
 
-
 def send_alert():
     notification_body = {
         'contents': {'en': '長時間お風呂から出ていないようです'},
