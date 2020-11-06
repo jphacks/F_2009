@@ -29,7 +29,7 @@ class UserEntity(Base):
     device_id = sqlalchemy.Column(sqlalchemy.String(20))
     token = sqlalchemy.Column(sqlalchemy.String(30))
     notice_management = sqlalchemy.Column(sqlalchemy.Integer)
-    latest_bath_time = sqlalchemy.Column(sqlalchemy.String(30))
+    latest_bath_time = sqlalchemy.Column(sqlalchemy.Integer)
 
     def user_entity_dict(self):
         return {

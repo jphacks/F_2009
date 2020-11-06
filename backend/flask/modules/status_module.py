@@ -61,10 +61,10 @@ def check_status(user_id):
             body_dict["message"] = "今日の入浴は終わりました"
 
             # 風呂を出たときにかみさんサーバのアラート閾値更新
-            threshold = calc_threshold(user_id)
-            bm_upd = BathroomMonitor(user_id)
-            bm.check_user()
-            bm.update_alert_time(threshold)
+            # threshold = calc_threshold(user_id)
+            # bm_upd = BathroomMonitor(user_id)
+            # bm.check_user()
+            # bm.update_alert_time(threshold)
 
 
     else:
