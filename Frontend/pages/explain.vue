@@ -39,7 +39,9 @@
           </v-card-title>
           <v-card-text>
             <img src="~/static/wifi.png" width="220px" height="350px"><br>
-            <div class="step">STEP2：デバイスとスマートフォンを同じWi-Fiで接続してください。</div>
+            <div class="step">STEP2：デバイスとスマートフォンを同じWi-Fiで接続してください。</div><br><br>
+            <div class="step"><br>以下の画面になれば接続完了です。</div><br>
+            <img src="~/static/connect.png" width="220px" height="350px"><br>
           </v-card-text>
         </v-card>
       </v-tab-item>
