@@ -19,7 +19,7 @@
       <v-col cols="12" v-if="is_connect">
         <div class="text-h6 font-weight-black">STEP2：</div>
         <div class="text-h6 mt-2">デバイスをWi-Fiと接続します。</div>
-        <v-btn class="mt-2" color="#FFB304" width="127" dark @click="connectWifi">Wi-Fiの接続</v-btn>
+        <v-btn class="mt-2" color="#FFB304" width="127" dark><a style="color:white" href="http://192.168.4.1">Wi-Fiの接続</a></v-btn>
       </v-col>
       <v-overlay
         :absolute="true"
