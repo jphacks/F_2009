@@ -27,7 +27,7 @@
             デバイス接続方法
           </v-card-title>
           <v-card-text>
-            <img src="~/static/device.png" width="220px" height="350px"><br>
+            <img src="~/static/device.png" width="220px" height="350px"><br><br>
             <div class="step">STEP1：接続ボタンをタップするとQRコードリーダーが立ち上がります。デバイスのQRコードを読み取って下さい。</div><br>
           </v-card-text>
         </v-card>
@@ -38,9 +38,17 @@
             Wi-Fi接続方法
           </v-card-title>
           <v-card-text>
-            <img src="~/static/wifi.png" width="220px" height="350px"><br>
-            <div class="step">STEP2：デバイスとスマートフォンを同じWi-Fiで接続してください。</div><br><br>
-            <div class="step"><br>以下の画面になれば接続完了です。</div><br>
+            <img src="~/static/wifi.png" width="220px" height="350px"><br><br>
+            <div class="step">STEP2：デバイスとスマートフォンをWi-Fiで接続してください。</div><br>
+            <div class="sentence"><br>Wifi設定画面で"OnDemand AP"を選んで下さい。</div><br>
+            <img src="~/static/wifi2.png" width="220px" height="350px"><br>
+            <div class="sentence"><br>Configure WIFIを選択してください。</div><br>
+            <img src="~/static/wifi3.png" width="220px" height="350px"><br>
+            <div class="sentence"><br>SSIDとパスワードを入力して接続して下さい。</div><br>
+            <img src="~/static/wifi4.png" width="220px" height="350px"><br> 
+            <div class="sentence"><br>次の文が表示されます。</div><br>
+            <img src="~/static/wifi5.png" width="220px" height="350px"><br>
+            <div class="sentence"><br>スマートフォンを元のWi-Fiに接続し、以下の画面となれば接続完了です。</div><br>
             <img src="~/static/connect.png" width="220px" height="350px"><br>
           </v-card-text>
         </v-card>
@@ -100,9 +108,17 @@ img {
     margin-left: auto;
     margin-right: auto 
 }
+div {
+  font-size: 14pt;
+}
 .step {
   margin-left: 4em;
   text-indent: -4em;
+}
+.sentence {
+    margin-left: 2em;
+    text-indent: -2em;
+    padding: 18pt;
 }
 .tsuchi {
   margin-left: 5em;
