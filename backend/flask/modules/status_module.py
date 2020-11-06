@@ -69,7 +69,7 @@ def check_status(user_id):
 def chenge_timeformat(tdatetime):
     # 時間データをJST形式に変換
     utc_time = tdatetime + datetime.timedelta(hours=-9)
-    jst_time = utc_time.strftime('%Y-%m-%d %H:%M:%S +90:00')
+    jst_time = utc_time.strftime('%Y-%m-%dT%H:%M:%S+90:00')
     return jst_time
 
 def alert_evaluation(user_id, bath_time):
