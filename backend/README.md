@@ -5,6 +5,9 @@
 2. IoTデバイスとユーザ端末の認証を行う.
 3. Flaskサーバに記録情報の提供を行う.
 
+### PHPバックエンドの仕様書
+https://www.notion.so/30bea1832bd2475b9c1cf394def3b0fc
+
 ### DBの操作
 ダミーデータの操作に関して \
 php_apis/test/dummyedit/record.php \
