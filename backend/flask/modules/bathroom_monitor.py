@@ -46,7 +46,7 @@ class BathroomMonitor(object):
         res = requests.post(
             'http://kn46itblog.xsrv.jp/hackathon/jphacks2020/php_apis/device/edit/dummy', json=payload
         )
-        print(res.text)
+        #print(res.text)
         # String -> dict 変換
         res_dict = ast.literal_eval(res.text)
         return res_dict
@@ -65,7 +65,7 @@ class BathroomMonitor(object):
         res = requests.post(
             'http://kn46itblog.xsrv.jp/hackathon/jphacks2020/php_apis/device/edit/assign', json=payload
         )
-        print(res.text)
+        #print(res.text)
         # String -> dict 変換
         res_dict = ast.literal_eval(res.text)
         # ハッシュセット
@@ -90,7 +90,7 @@ class BathroomMonitor(object):
         res = requests.post(
             'http://kn46itblog.xsrv.jp/hackathon/jphacks2020/php_apis/bath/show/list', json=payload
         )
-        print(res.text)
+        #print(res.text)
         res_dict = ast.literal_eval(res.text)
         return res_dict
 
@@ -109,7 +109,7 @@ class BathroomMonitor(object):
         res = requests.post(
             'http://kn46itblog.xsrv.jp/hackathon/jphacks2020/php_apis/device/edit/unassign', json=payload
         )
-        print(res.text)
+        #print(res.text)
         res_dict = ast.literal_eval(res.text)
         return res_dict
 
@@ -130,7 +130,7 @@ class BathroomMonitor(object):
         res = requests.post(
             'http://kn46itblog.xsrv.jp/hackathon/jphacks2020/php_apis/device/edit/alert_time', json=payload
         )
-        print(res.text)
+        #print(res.text)
         res_dict = ast.literal_eval(res.text)
         return res_dict
 
