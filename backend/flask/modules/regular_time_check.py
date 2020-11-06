@@ -37,7 +37,7 @@ def regular_check_bathtime():
                 user.notice_management = 1
                 us.update(user)
                 send_enter_notification()
-
+                print("入浴通知")
             break
         elif status_dict["status"] == 2:
             # 入浴後
@@ -46,6 +46,7 @@ def regular_check_bathtime():
                 user.notice_management = 2
                 us.update(user)
                 send_exit_notification()
+                print("入浴後通知")
             break
         elif status_dict["status"] == 3:
             # 緊急
@@ -54,12 +55,14 @@ def regular_check_bathtime():
                 user.notice_management = 3
                 us.update(user)
                 send_alert()
+                print("緊急通知")
             break
         else:
             # 入浴前
             if user.notice_management != 0:
                 user.notice_management = 0
                 us.update(user)
+                print("入る前通知")
             break
 
         print('5秒毎に実行')

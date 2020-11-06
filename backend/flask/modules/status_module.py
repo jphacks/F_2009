@@ -43,12 +43,14 @@ def check_status(user_id):
                 jst_entry_time = chenge_timeformat(latest_tdatetime)
                 body_dict["entry_time"] = jst_entry_time
                 body_dict["message"] = "緊急状態です"
+                print("緊急状態です")
             else:
                 # 入浴中
                 status = 1
                 jst_entry_time = chenge_timeformat(latest_tdatetime)
                 body_dict["entry_time"] = jst_entry_time
                 body_dict["message"] = "入浴中です"
+                print("入浴中です")
         else:
             # 入浴後
             status = 2
@@ -59,6 +61,7 @@ def check_status(user_id):
             body_dict["entry_time"] = jst_entry_time
             body_dict["exit_time"] = jst_exit_time
             body_dict["message"] = "今日の入浴は終わりました"
+            print("入浴後です")
 
             # 風呂を出たときにかみさんサーバのアラート閾値更新
             # threshold = calc_threshold(user_id)
@@ -71,6 +74,7 @@ def check_status(user_id):
         # 入浴前
         status = 0
         body_dict["message"] = "今日はまだ入浴していません"
+        print("入浴前です")
 
     body_dict["status"] = status
 
