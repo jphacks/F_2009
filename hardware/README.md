@@ -20,3 +20,7 @@
 
 ### 物品リスト
 https://www.notion.so/72437c29007544b48976c7b452898bb6?v=5f4ae2c5bcf64ef59f31a0458f2d1865
+
+### 外部ライブラリ
+wifimanager: https://github.com/zhouhan0126/WIFIMANAGER-ESP32
+i2clcd: https://www.denshi.club/cookbook/arduino/esp32/esp32-7-i2clcd.html
