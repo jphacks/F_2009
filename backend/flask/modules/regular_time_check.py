@@ -18,7 +18,7 @@ scheduler = BackgroundScheduler()
 
 
 
-@scheduler.scheduled_job('interval', seconds=5, max_instances=1)
+@scheduler.scheduled_job('interval', seconds=60, max_instances=1)
 def regular_check_bathtime():
     """
     入浴状態の定期チェック
