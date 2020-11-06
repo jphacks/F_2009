@@ -1,77 +1,109 @@
 <template>
-  <div class="example">
-    <v-col class="contents" align="center">
-      <div>説明1</div>
-      <div>説明2</div>
-      <div>説明3</div>
-      <div>説明4</div>
-      <div>説明5</div>
-    </v-col>
-    <v-col class="tabs" align="center">
-      <Tab
-        v-for="item in list"
-        v-bind="item" :key="item.id"
-        v-model="currentId"/>
-    </v-col>
-  </div>
+  <v-card>
+    <v-toolbar
+      color="grey"
+      dark
+      flat
+    >
+      <template v-slot:extension>
+        <v-tabs
+          v-model="tabs"
+          centered
+        >
+          <v-tab
+            v-for="n in 4"
+            :key="n"
+          >
+            {{n}}
+          </v-tab>
+        </v-tabs>
+      </template>
+    </v-toolbar>
+
+    <v-tabs-items v-model="tabs">
+      <v-tab-item>
+        <v-card flat>
+          <v-card-title class="headline">
+            デバイス接続方法
+          </v-card-title>
+          <v-card-text>
+            <img src="~/static/device.png" width="220px" height="350px"><br>
+            <div class="step">STEP1：接続ボタンをタップするとQRコードリーダーが立ち上がります。デバイスのQRコードを読み取って下さい。</div><br>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+      <v-tab-item>
+        <v-card flat>
+          <v-card-title class="headline">
+            Wi-Fi接続方法
+          </v-card-title>
+          <v-card-text>
+            <img src="~/static/wifi.png" width="220px" height="350px"><br>
+            <div class="step">STEP2：デバイスとスマートフォンを同じWi-Fiで接続してください。</div>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+      <v-tab-item>
+        <v-card flat>
+          <v-card-title class="headline">
+            ホーム画面の見方
+          </v-card-title>
+          <v-card-text>  
+            <img src="~/static/bath2.png" width="220px" height="350px"><br>
+            <div>①：今日の日付です</div>
+            <div>②：今日の入浴状況です</div>
+            <div>③：今日の入浴時間が表示されます</div>
+            <div>④：一週間の平均入浴時間が表示されます</div>
+            <div>⑤：一週間の変化が見られます</div>
+            <br>
+            <div>入浴中</div><br>
+            <img src="~/static/bath4.png" width="220px" height="350px"><br>
+            <div>警告時</div><br>
+            <img src="~/static/bath3.png" width="220px" height="350px"><br>
+            <div>入浴終了時</div><br>
+            <img src="~/static/bath1.png" width="220px" height="350px"><br>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+      <v-tab-item>
+        <v-card flat>
+          <v-card-title class="headline">
+            通知
+          </v-card-title>
+          <v-card-text>
+            <img src="~/static/notif.png" width="220px" height="350px"><br>
+            <div class="tsuchi">通知設定：お風呂の出入り時に通知したいか選べます。</div>
+            <div class="tsuchi">通報設定：緊急時に通報するか選べます。</div>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+    </v-tabs-items>
+  </v-card>
 </template>
 
 <script>
-import Tab from './tab.vue'
-export default {
-  components: { Tab },
-  data() {
-    return {
-      currentId: 1,
-      list: [
-        { id: 1, content: '説明1' },
-        { id: 2, content: '説明2' },
-        { id: 3, content: '説明3' },
-        { id: 4, content: '説明4' },
-        { id: 5, content: '説明5' }
-      ]
-    }
-  },
-  computed: {
-    current() {
-      return this.list.find(el => el.id === this.currentId) || {}
-    }
+  export default {
+    data () {
+      return {
+        tabs: null,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      }
+    },
   }
-}
 </script>
 
 <style scoped>
-.contents {
-  display: flex;
-  position: relative;
-  overflow-x: scroll;
-  width: 100%;
-  -webkit-overflow-scrolling: touch;
-  -overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
+img {
+   display: block;
+    margin-left: auto;
+    margin-right: auto 
 }
-.contents > div {
-   scroll-snap-align: center;
-    height: 100%;
-    width: 100%;
-    flex: none;
+.step {
+  margin-left: 4em;
+  text-indent: -4em;
 }
-.item {
-  box-sizing: border-box;
-  padding: 10px;
-  width: 100%;
-  transition: all 0.8s ease;
-  scroll-snap-align: start;
-  scroll-snap-align: cnter;
-  flex: none;
-}
-.v-leave-active {
-  position: absolute;
-}
-.v-enter {
-  transform: translateX(-100%);
-}
-.v-leave-to {
-  transform: translateX(100%);
+.tsuchi {
+  margin-left: 5em;
+  text-indent: -5em;
 }
 </style>
