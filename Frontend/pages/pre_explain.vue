@@ -12,7 +12,6 @@
                 また，入浴時間を測定，可視化することで，生存確認や，健康的な入浴か把握することできます．
             </v-col>
         </v-col>
-        <v-col class="subtitle">設置方法</v-col>
     </v-content>
 </template>
 
