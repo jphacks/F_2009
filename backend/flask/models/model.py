@@ -53,7 +53,9 @@ class UserService(object):
           # userテーブル全件取得
         :return: Array(UserEntity)
         """
-        return session.query(UserEntity).all()
+        result = session.query(UserEntity).all()
+        session.commit()
+        return result
 
     def find(self, user_id):
         """
@@ -62,6 +64,7 @@ class UserService(object):
         :return: UserEntity
         """
         user = session.query(UserEntity).filter(UserEntity.user_id == user_id).all()
+        session.commit()
         if len(user) != 0:
             return user[0]
         else:
@@ -74,6 +77,7 @@ class UserService(object):
         :return: UserEntity
         """
         user = session.query(UserEntity).filter(UserEntity.device_id == device_id).all()
+        session.commit()
         if len(user) != 0:
             return user[0]
         else:
@@ -134,3 +138,5 @@ class UserService(object):
         except Exception as ex:
             print("Exception:{}".format(ex))
             return "error"
+
+session.close()
