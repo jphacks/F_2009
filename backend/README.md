@@ -1,3 +1,19 @@
 # Backend
+## PHP
+### PHPサーバの役割
+1. IoTデバイスからの情報を取得する.
+2. IoTデバイスとユーザ端末の認証を行う.
+3. Flaskサーバに記録情報の提供を行う.
 
+### PHPバックエンドの仕様書
+https://www.notion.so/30bea1832bd2475b9c1cf394def3b0fc
 
+### DBの操作
+ダミーデータの操作に関して \
+php_apis/test/dummyedit/record.php \
+より、新規登録・一部削除・一覧表示が可能です.
+
+### 注意事項
+mysqli関数に関する情報は機密情報なので, 置き換えて各環境に合わせて使用ください.
+
+## Flask
