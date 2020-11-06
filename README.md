@@ -1,7 +1,7 @@
 # サンプル（プロダクト名）
 
 [![IMAGE ALT TEXT HERE](https://jphacks.com/wp-content/uploads/2020/09/JPHACKS2020_ogp.jpg)](https://www.youtube.com/watch?v=G5rULR53uMk)
-
+![回路図](https://user-images.githubusercontent.com/49345024/98388273-e76f9e80-2095-11eb-9d32-6df8dd0cc89f.jpg)
 ## 製品概要
 ### 背景(製品開発のきっかけ、課題等）
 [内閣府の発表](https://www8.cao.go.jp/kourei/whitepaper/w-2017/html/zenbun/s1_2_1.html)によると，2017年の時点で65歳以上の高齢者のいる世帯の約26%が単独世帯となっており，年々増加傾向にあります．単独世帯において，高齢者が一人で住んでいる場合，高齢者に何か異常があっても誰も検知することができません．また，身内（子供や孫）が離れた場所に住んでいて検知が遅れる場合があります．
