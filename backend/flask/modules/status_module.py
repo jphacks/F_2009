@@ -93,7 +93,7 @@ def alert_evaluation(user_id, bath_time):
     """
     threshold = calc_threshold(user_id)
 
-    if bath_time > threshold:
+    if bath_time >= threshold:
         # 経過時間が平均入浴時間の倍より長ければ緊急
         return True
     else:

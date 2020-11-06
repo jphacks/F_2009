@@ -49,7 +49,7 @@ def regular_check_bathtime():
             break
         elif status_dict["status"] == 3:
             # 緊急
-            if user.notice_management == 0 or user.notice_management == 1 or user.notice_management == 3:
+            if user.notice_management == 0 or user.notice_management == 1 or user.notice_management == 2:
                 # 緊急時まだ通知していなければ通知する
                 user.notice_management = 3
                 us.update(user)
