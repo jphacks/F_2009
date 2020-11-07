@@ -1,7 +1,8 @@
 # 安心ふろ～（風呂xTech）
 
-![IMAGE ALT TEXT HERE](frontend/assets/logo/anshin_furow.png)[1]
+[![ロゴ](frontend/assets/logo/anshin_furow.png)][1]
 [1]: https://youtu.be/iCerLnWxvVQ
+
 
 ## 製品概要
 ### 背景(製品開発のきっかけ、課題等）
