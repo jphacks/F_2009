@@ -62,7 +62,7 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 </p>
 <p float="left>
   <div>4. 異常事態には，通知が来ます.  </div>
-  <div><img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/announce.png" width="350" /> </div>  
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/announce.png" width="350" />  
 </p>
 
 * デバイス側  
@@ -72,6 +72,7 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 </p>
 <p float="left">
   <div>2. 異常時はIoTデバイスからもブザーが鳴り，本人にも通知され誤検知を防ぎます．  </div>
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/deviceview.png" width="350" />  
 </p>
 
 ### 今後の展望
