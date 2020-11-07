@@ -20,7 +20,7 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 入浴時間のデータは常にためており，過去のデータからその人の平均入浴時間を算出し，異常な入浴時間の時にユーザーのスマホに通知がきます．
 
 ![IoT Device](https://user-images.githubusercontent.com/49345024/98411801-10a22600-20ba-11eb-8396-64ec01ce0d45.jpg)
-[スマホアプリ画像]
+[スマホアプリ画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath1.png)
 
 ### 特長
 #### 特徴1 手軽に導入できる！
