@@ -22,10 +22,10 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 ![IoT Device](https://user-images.githubusercontent.com/49345024/98411801-10a22600-20ba-11eb-8396-64ec01ce0d45.jpg)
 
 <p float="left">
-  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath5.png" width="240" />
-  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath4.png" width="240" /> 
-  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath3.png" width="240" />
-  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath1.png" width="240" />
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath5.png" width="230" />
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath4.png" width="230" /> 
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath3.png" width="230" />
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath1.png" width="230" />
 </p>
 
 ### 特長
@@ -43,9 +43,9 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 
 * アプリ側
 1. QRコードからデバイスを登録  
-![画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/qrread.jpg)
+![画像](https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/qrread.jpg)
 2. 専用WiFiに接続し，デバイスのネットワークを設定  
-![画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/wificonnectview.jpg)
+![画像](https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/wificonnectview.jpg)
 3. アプリから現在の入浴状況を確認できます  
 <p float="left">
   <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath4.png" width="240" /> 
@@ -56,9 +56,9 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 
 * デバイス側
 1, 入浴時にRFIDtタグをかざしてもらうだけです！  
-![画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/touch.png)
+![画像](https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/touch.png)
 2. 異常時はIoTデバイスからもブザーが鳴り，本人にも通知され誤検知を防ぎます．  
-![画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/announce.png)
+![画像](https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/announce.png)
 
 ### 今後の展望
 * 気圧センサや人感センサ等を駆使して，異常検知の精度を上げる．
