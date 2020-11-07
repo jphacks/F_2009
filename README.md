@@ -1,6 +1,6 @@
 # 安心ふろ～（Anshin Furow）
 
-[![IMAGE ALT TEXT HERE](Frontend/assets/logo/anshin_furow.png)
+![IMAGE ALT TEXT HERE](Frontend/assets/logo/anshin_furow.png)
 ## 製品概要
 ### 背景(製品開発のきっかけ、課題等）
 [内閣府の発表](https://www8.cao.go.jp/kourei/whitepaper/w-2017/html/zenbun/s1_2_1.html)によると，2017年の時点で65歳以上の高齢者のいる世帯の約26%が単独世帯となっており，年々増加傾向にあります．単独世帯において，高齢者が一人で住んでいる場合，高齢者に何か異常があっても誰も検知することができません．また，身内（子供や孫）が離れた場所に住んでいて検知が遅れる場合があります．
