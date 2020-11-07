@@ -22,10 +22,10 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 ![IoT Device](https://user-images.githubusercontent.com/49345024/98411801-10a22600-20ba-11eb-8396-64ec01ce0d45.jpg)
 
 <p float="left">
-  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath5.png" width="235" />
-  <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath4.png" width="235" /> 
-  <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath3.png" width="235" />
-  <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath1.png" width="235" />
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath5.png" width="230" />
+  <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath4.png" width="230" /> 
+  <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath3.png" width="230" />
+  <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath1.png" width="230" />
 </p>
 
 
