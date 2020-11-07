@@ -69,7 +69,7 @@ RFIDの認証と距離センサで風呂場の扉の開閉検知から，入浴�
 
 * デバイス側  <br/>
 <p float="left">
-  <div>1, 入浴時にRFIDtタグをかざしてもらうだけです！</div><br/>  
+  <div>1, 入浴時にRFIDタグをかざしてもらうだけです！</div><br/>  
   <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/touch.png" width="350" />
 </p><br/>
 <p float="left">
