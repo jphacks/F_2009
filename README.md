@@ -43,19 +43,22 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 
 * アプリ側
 1. QRコードからデバイスを登録  
-[画像]
+![画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/qrread.jpg)
 2. 専用WiFiに接続し，デバイスのネットワークを設定  
-[画像]
+![画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/wificonnectview.jpg)
 3. アプリから現在の入浴状況を確認できます  
-[画像]
+<p float="left">
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath4.png" width="240" /> 
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath3.png" width="240" />
+</p>
 4. 異常事態には，通知が来ます．  
 
 
 * デバイス側
-1, 入浴時にRFIDtタグをかざしてもらうだけです！
-[画像]
-2. 異常時はIoTデバイスからもブザーが鳴り，本人にも通知され誤検知を防ぎます．
-[画像]
+1, 入浴時にRFIDtタグをかざしてもらうだけです！  
+![画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/touch.png)
+2. 異常時はIoTデバイスからもブザーが鳴り，本人にも通知され誤検知を防ぎます．  
+![画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/announce.png)
 
 ### 今後の展望
 * 気圧センサや人感センサ等を駆使して，異常検知の精度を上げる．
