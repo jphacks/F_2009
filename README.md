@@ -21,8 +21,13 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 
 ![IoT Device](https://user-images.githubusercontent.com/49345024/98411801-10a22600-20ba-11eb-8396-64ec01ce0d45.jpg)
 
-![スマホアプリ画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath1.png)![スマホアプリ画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath2.png)![スマホアプリ画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath3.png)![スマホアプリ画像](https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath4.png)
-
+https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath5.png
+<p float="left">
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath5.png" width="100" />
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath1.png" width="100" /> 
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath2.png" width="100" />
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath4.png" width="100" />
+</p>
 
 ### 特長
 #### 特徴1 手軽に導入できる！
