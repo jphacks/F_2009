@@ -46,8 +46,8 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 
 * アプリ側
 <p display="flex">
-  <div>1. QRコードからデバイスを登録</div>
   <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/qrread.jpg" width="350" /> 
+  <div>1. QRコードからデバイスを登録</div>
 </P>
 <p float="left">
   <div>2. 専用WiFiに接続し，デバイスのネットワークを設定  </div>
