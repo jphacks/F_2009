@@ -22,11 +22,12 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 ![IoT Device](https://user-images.githubusercontent.com/49345024/98411801-10a22600-20ba-11eb-8396-64ec01ce0d45.jpg)
 
 <p float="left">
-  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath5.png" width="230" />
-  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath4.png" width="230" /> 
-  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath3.png" width="230" />
-  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath1.png" width="230" />
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath5.png" width="235" />
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath4.png" width="235" /> 
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath3.png" width="235" />
+  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath1.png" width="235" />
 </p>
+
 
 ### 特長
 #### 特徴1 手軽に導入できる！
@@ -35,30 +36,42 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 
 #### 特徴3 過去の入浴データから生活リズムが確認できる！(生存確認にも)
 
+
 ### 解決出来ること
 
 高齢者の異常が発生した時に，だれも気付かずに手遅れになってしまうことを防ぎます！
 
+
 ### 使い方
 
 * アプリ側
-1. QRコードからデバイスを登録  
-<img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/qrread.jpg" width="350" /> 
-2. 専用WiFiに接続し，デバイスのネットワークを設定  
-<img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/wificonnectview.jpg" width="350" /> 
-3. アプリから現在の入浴状況を確認できます  
 <p float="left">
-  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath4.png" width="350" /> 
-  <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath3.png" width="350" />
+  <div>1. QRコードからデバイスを登録</div
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/qrread.jpg" width="350" /> 
+</P>
+<p float="left">
+  <div>2. 専用WiFiに接続し，デバイスのネットワークを設定  </div>
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/wificonnectview.jpg" width="350" /> 
+</p>
+<p float="left">
+<div>3. アプリから現在の入浴状況を確認できます  </div>
+  <p float="left">
+    <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath4.png" width="350" /> 
+    <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath3.png" width="350" />
+  </p>
 </p>
 4. 異常事態には，通知が来ます．  
 
 
 * デバイス側  
-1, 入浴時にRFIDtタグをかざしてもらうだけです！  
-<img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/touch.png" width="350" /> 
-2. 異常時はIoTデバイスからもブザーが鳴り，本人にも通知され誤検知を防ぎます．  
-<img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/announce.png" width="350" /> 
+<p float="left">
+  <div>1, 入浴時にRFIDtタグをかざしてもらうだけです！  </div>
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/touch.png" width="350" />
+</p>
+<p float="left">
+  <div>2. 異常時はIoTデバイスからもブザーが鳴り，本人にも通知され誤検知を防ぎます．  </div>
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/announce.png" width="350" /> 
+</p>
 
 ### 今後の展望
 * 気圧センサや人感センサ等を駆使して，異常検知の精度を上げる．
