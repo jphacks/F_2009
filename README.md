@@ -52,7 +52,7 @@ RFIDの認証と距離センサで風呂場の扉の開閉検知から，入浴�
   <div><img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/qrread.jpg" width="350" /></div> 
 </P><br/>
 <p float="left">
-  <div>2. 専用WiFiに接続し，デバイスのネットワークを設定  </div><br/>  
+  <div>2. IoTデバイスが作るアクセスポイントに接続し，IoTデバイスのネットワークを設定（Alex◯方式）  </div><br/>  
   <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/wificonnectview.jpg" width="350" /> 
 </p><br/>
 <p float="left">
