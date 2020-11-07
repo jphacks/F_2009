@@ -25,9 +25,9 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 
 <p float="left">
   <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath5.png" width="200" />
-  <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath4.png" width="200" /> 
-  <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath3.png" width="200" />
-  <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath1.png" width="200" />
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath4.png" width="200" /> 
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath3.png" width="200" />
+  <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath1.png" width="200" />
 </p>
 
 
@@ -58,8 +58,8 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 <p float="left">
   <div>3. アプリから現在の入浴状況を確認できます  </div>  <br/>
   <p float="left">
-    <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath4.png" width="350" /> 
-    <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath3.png" width="350" />
+    <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath4.png" width="350" /> 
+    <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/bath3.png" width="350" />
   </p>
 </p><br/>
 <p float="left">
