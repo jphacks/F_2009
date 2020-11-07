@@ -30,4 +30,4 @@ https://app.swaggerhub.com/apis/ToruTamahashi/AnshinFlow/1.0.1
 https://docs.google.com/document/d/1dWd-h3xYZmDbBt_bg17s4Y6AS2Awkbuyp-e70gQ2x90/edit?usp=sharing
 
 ### 注意事項
-mysql接続ユーザid,パスワード,host,port, onesignalのapiキー,rest apiキーはpython-dotenvというライブラリでlocalで管理しているので,.envというファイルを作成し、そこに環境変数を設定するようにしてください.
+mysql接続ユーザid,パスワード,host,port, onesignalのapiキー,rest apiキーはpython-dotenvという各環境で設定するようにして下さい.
