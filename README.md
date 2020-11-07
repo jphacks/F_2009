@@ -48,32 +48,32 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 <p display="flex">
   <div>1. QRコードからデバイスを登録</div>  <br/>
   <div><img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/qrread.jpg" width="350" /></div> 
-</P>
+</P><br/>
 <p float="left">
   <div>2. 専用WiFiに接続し，デバイスのネットワークを設定  </div><br/>  
   <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/wificonnectview.jpg" width="350" /> 
-</p>
+</p><br/>
 <p float="left">
   <div>3. アプリから現在の入浴状況を確認できます  </div>  <br/>
   <p float="left">
     <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath4.png" width="350" /> 
     <img src="https://github.com/jphacks/F_2009/blob/master/frontend/static/bath3.png" width="350" />
   </p>
-</p>
+</p><br/>
 <p float="left">
   <div>4. 異常事態発生時には，通知が来ます  </div>  <br/>
   <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/announce.png" width="350" />  
-</p>
+</p><br/>
 
 * デバイス側  <br/>
 <p float="left">
   <div>1, 入浴時にRFIDtタグをかざしてもらうだけです！</div><br/>  
   <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/touch.png" width="350" />
-</p>
+</p><br/>
 <p float="left">
   <div>2. 異常時はIoTデバイスからもブザーが鳴り，本人にも通知され誤検知を防ぎます.</div><br/>  
   <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/deviceview.jpg" width="350" />  
-</p>
+</p><br/>
 
 ### 今後の展望
 * 気圧センサや人感センサ等を駆使して，異常検知の精度を上げる．
