@@ -73,7 +73,7 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
 <p float="left">
   <div>2. 異常時はIoTデバイスからもブザーが鳴り，本人にも通知され誤検知を防ぎます.</div><br/>  
   <img src="https://github.com/jphacks/F_2009/blob/frontend_Nokubi/Frontend/static/deviceview.jpg" width="350" />  
-</p><br/>
+</p>
 
 ### 今後の展望
 * 気圧センサや人感センサ等を駆使して，異常検知の精度を上げる．
