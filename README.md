@@ -60,7 +60,8 @@ IoTデバイスを用いて，風呂場に入ったor出たかを検知します
     <img src="https://github.com/jphacks/F_2009/blob/master/Frontend/static/bath3.png" width="350" />
   </p>
 </p>
-4. 異常事態には，通知が来ます．  
+4. 異常事態には，通知が来ます.  
+
 
 
 * デバイス側  
